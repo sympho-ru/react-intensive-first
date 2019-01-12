@@ -11,20 +11,26 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
+        <HelloWorld/>
         <SayFullName name="Alexander" surname="Rassokhin" link="https://google.com" />
-        <SayFullName name="Elena" surname="Rassokhina" link="https://instagr.am" />
-        <SayFullName name="Sophia" surname="Rassokhina" link="#" />
+        <SayFullName name="Darth" surname="Vader" link="https://instagr.am" />
+        <SayFullName name="Tony" surname="Stark" link="#" />
       </div>      
     );
   }
 }
 
+function HelloWorld() {
+  return (
+      <h1>Hello, world!</h1>
+    )
+}
 function SayFullName(props) {
   return (
-      <div>
+      <React.Fragment>
         <h2>My name is {props.name}, surname is {props.surname}</h2>
         <a href={props.link}>My profile: {props.link}</a>
-      </div>
+      </React.Fragment>
     )
 }
 
