@@ -1,37 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components'
+
+import Header from './components/Header'
+import Menu from './components/Menu'
+import Main from './components/Main'
+
+const background_url = process.env.PUBLIC_URL + "/img/background.png"
+
+const HeaderWrapper = styled.header`
+  width: 100%;
+  height: 48px;
+  background-color: #242424;
+  opacity: 0.8;  
+`
+const MenuWrapper = styled.div`
+  height: 90px;
+  padding-top: 22px;
+`
+const MainWrapper = styled.main`
+  height: 562px;
+  padding-top: 131px;
+  background: url(${background_url})  no-repeat;
+  background-size: cover;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="wrapper">
-        <HelloWorld/>
-        <SayFullName name="Alexander" surname="Rassokhin" link="https://google.com" />
-        <SayFullName name="Darth" surname="Vader" link="https://instagr.am" />
-        <SayFullName name="Tony" surname="Stark" link="#" />
-      </div>      
+      <div className="App">
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+        <MenuWrapper>
+          <Menu />
+        </MenuWrapper>
+        <MainWrapper>
+          <Main />
+        </MainWrapper>
+      </div>
     );
   }
-}
-
-function HelloWorld() {
-  return (
-      <h1>Hello, world!</h1>
-    )
-}
-function SayFullName(props) {
-  return (
-      <React.Fragment>
-        <h2>My name is {props.name}, surname is {props.surname}</h2>
-        <a href={props.link}>My profile: {props.link}</a>
-      </React.Fragment>
-    )
 }
 
 export default App;
