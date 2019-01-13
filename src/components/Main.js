@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Slider from './Slider';
 
 const Title = styled.h1`
 	margin: 0;
@@ -45,10 +46,14 @@ class Main extends React.Component {
     		<Row>
 	    		<Col lg={5}>
 	    			<Title>Качественный ремонт <span>iphone за 35 минут и гарантия 1 год</span></Title>
-	    			<Offer>Оставьте заявку на бесплатную диагностику без очереди, и получите защитное стекло, стоимостью 1000 рублей, с установкой в подарок!</Offer>
+	    			<Offer>Оставьте заявку на бесплатную диагностику без
+	    			очереди, и получите защитное стекло, стоимостью
+	    			1000 рублей, с установкой в подарок!
+	    			</Offer>
 	    			<ButtonQuote>Отправить заявку!</ButtonQuote>
 	    		</Col>
-	    		<Col lg={6} lfOffset={1}>
+	    		<Col lg={6} lgOffset={1}>
+	    			<Slider />
 	    		</Col>
 	    	</Row>
     	</Grid>
