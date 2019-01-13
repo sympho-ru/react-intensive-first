@@ -42,13 +42,15 @@ class Main extends React.Component {
   render() {
     return (
     	<Grid>
-    		<Col lg={5}>
-    			<Title>Качественный ремонт <span>iphone за 35 минут и гарантия 1 год</span></Title>
-    			<Offer>Оставьте заявку на бесплатную диагностику без очереди, и получите защитное стекло, стоимостью 1000 рублей, с установкой в подарок!</Offer>
-    			<ButtonQuote>Отправить заявку!</ButtonQuote>
-    		</Col>
-    		<Col lg={6} lfOffset={1}>
-    		</Col>
+    		<Row>
+	    		<Col lg={5}>
+	    			<Title>Качественный ремонт <span>iphone за 35 минут и гарантия 1 год</span></Title>
+	    			<Offer>Оставьте заявку на бесплатную диагностику без очереди, и получите защитное стекло, стоимостью 1000 рублей, с установкой в подарок!</Offer>
+	    			<ButtonQuote>Отправить заявку!</ButtonQuote>
+	    		</Col>
+	    		<Col lg={6} lfOffset={1}>
+	    		</Col>
+	    	</Row>
     	</Grid>
     )
   }

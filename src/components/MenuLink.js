@@ -8,10 +8,12 @@ const StyledMenuLink = styled.a`
 	line-height: 27px;
 	padding: 0 20px;
 	border-right: 1px dotted #969696;
-
 	&:hover {
 		color: #8d8d8d;
 		text-decoration: none;
+	}
+	&:last-child {
+		border-right: none;
 	}
 `
 
