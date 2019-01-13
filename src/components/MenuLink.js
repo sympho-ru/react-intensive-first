@@ -17,7 +17,7 @@ const StyledMenuLink = styled.a`
 	}
 `
 
-class MenuLink extends React.Component {
+class MenuLink extends Component {
   render() {
     return (
     	<StyledMenuLink href={this.props.link}>{this.props.text}</StyledMenuLink>

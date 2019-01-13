@@ -34,9 +34,9 @@ class Slider extends Component {
 	intervalBetweenSlides() {
 		if (this.state.autoplay) {
 			if (this.state.active === this.state.max - 1) {
-				this.state.active = 0;
+				this.setState({active: 0});
 			} else {
-				this.state.active++;
+				this.setState({active: this.state.active + 1});
 			}
 			this.setState({
 				active: this.state.active
@@ -44,7 +44,6 @@ class Slider extends Component {
 		}
 	}
 	toggleAutoPlay() {
-		console.log("Toggled AutoPlay");
 		this.setState({
 			autoplay: !this.state.autoplay
 		})
@@ -99,7 +98,7 @@ class Slider extends Component {
 					key={index}
 					ref="dots"
 					onClick={this.dots.bind(this, index)}>
-					<a>&#9679;</a>
+					<a href="#/">&#9679;</a>
 				</li>
 			))
 	}
@@ -156,6 +155,7 @@ class Slider extends Component {
 					</ul>
 					<a
 						className="toggle-play"
+						href="#/"
 						onClick={this.toggleAutoPlay}>
 						{this.renderPlayStop()}
 					</a>
